@@ -1,0 +1,6 @@
+Add parameter to JVM:
+-XX:+HeapDumpOnOutOfMemoryError
+
+or use jmap utility:
+$ jmap -dump:file=heap.bin $JVM_PID
+
