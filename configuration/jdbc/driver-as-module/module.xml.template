@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.0" name="com.example.jdbc">
+	<resources>
+		<!-- path below and localisation of this file is relative to 
+		     $JBOSS_HOME/modules/com/example/jdbc/main/ -->
+		<resource-root path="example-jdbc-connector.jar"/>
+	</resources>
+	<dependencies>
+		<module name="javax.api"/>
+		<module name="javax.transaction.api"/>
+	</dependencies>
+</module>
+
