@@ -1,0 +1,1 @@
+- ldap.cli - example of adding LDAP-backed security domain through CLI interface 

@@ -1,0 +1,19 @@
+/profile=default/subsystem=security/security-domain=ldapdomain:add(
+	authentication=[{
+		"code"=>"Ldap",
+		"flag"=>"required",
+		"module-options"=>[
+			("java.naming.factory.initial"=>"com.sun.jndi.ldap.LdapCtxFactory"),
+			("java.naming.provider.url"=>"ldap://host:port"),
+			("java.naming.security.authentication"=>"simple"),
+			("principalDNPrefix"=>"uid"),
+			("principalDNSuffix"=>",ou=People,dc=example,dc=com"),
+			("rolesCtxDN"=>"ou=Roles,dc=example,dc=com"),
+			("uidAttributeID"=>"member"),
+			("matchOnUserDN"=>"true"),
+			("roleAttributeID"=>"cn"),
+			("roleAttributeIsDN"=>"false")
+		]
+	}]
+)
+
