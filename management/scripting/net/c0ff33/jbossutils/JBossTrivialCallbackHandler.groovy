@@ -29,7 +29,7 @@ class JBossTrivialCallbackHandler implements CallbackHandler {
     JBossTrivialCallbackHandler(String username, String password) {
         this.username = username
         this.password = password
-        useRealm = false;
+        useRealm = false
     }
 
     /**
@@ -42,15 +42,15 @@ class JBossTrivialCallbackHandler implements CallbackHandler {
     void handle(Callback[] callbacks) throws IOException, UnsupportedCallbackException {
         for (Callback c : callbacks) {
             if (c instanceof NameCallback) {
-                NameCallback nc = c;
+                NameCallback nc = c
                 nc.setName(username)
             }
             if (c instanceof PasswordCallback) {
-                PasswordCallback pc = c;
+                PasswordCallback pc = c
                 pc.setPassword(password.toCharArray())
             }
             if (c instanceof RealmCallback) {
-                RealmCallback rc = c;
+                RealmCallback rc = c
                 if (useRealm)
                     rc.setText(realm)
                 else
