@@ -7,16 +7,16 @@ import javax.security.auth.callback.CallbackHandler
  * Example script deploying WAR to a remote JBoss AS 7 instance, utilizing JBossCustomRemoteDeployer.
  * @author rkujawa
  */
-hostname = "127.0.0.1"
+hostname = "localhost"
 port = 9999
-login = "foo"
-password = "bar"
+login = "adminuser"
+password = "secret"
 
 ch = (CallbackHandler) new JBossTrivialCallbackHandler(login, password)
 
 client = org.jboss.as.controller.client.ModelControllerClient.Factory.create(hostname, port, ch)
 
 deployer = new JBossCustomRemoteDeployer(client)
-deployer.run(new File("/Users/rkujawa/testApp.war"), JBossCustomRemoteDeployer.DEPLOYMENT_TYPE_UNDEPLOY)
+deployer.run(new File("/Users/rkujawa/testApp.war"), JBossCustomRemoteDeployer.DEPLOYMENT_TYPE_DEPLOY)
 
 client.close()

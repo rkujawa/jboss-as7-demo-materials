@@ -1,0 +1,1 @@
+/subsystem=datasources/data-source=testAppDS:add(jndi-name=java:jboss/datasources/testAppDS,connection-url=jdbc:postgresql://192.168.200.2:5432/test,user-name=jboss,password=jboss,min-pool-size=5,max-pool-size=15,driver-name=postgresql)

@@ -9,10 +9,10 @@ import javax.security.auth.callback.CallbackHandler
  * @author rkujawa
  */
 
-hostname = "localhost"
+hostname = "10.115.0.76"
 port = 9999
-login = "adminuser"
-password = "secret"
+login = "admin"
+password = "adminadmin"
 
 ch = (CallbackHandler) new JBossTrivialCallbackHandler(login, password)
 
