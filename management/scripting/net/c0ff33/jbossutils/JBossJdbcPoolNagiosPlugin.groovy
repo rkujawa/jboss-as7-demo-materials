@@ -39,7 +39,6 @@ class JBossJdbcPoolNagiosPlugin extends JBossAbstractNagiosPlugin {
 
     private ModelNode getDatasourcePoolStatistics() {
         ModelNode op
-        ModelNode resultNode
         ModelNode addr
         op = new ModelNode();
         op.get("operation").set("read-resource");

@@ -8,9 +8,10 @@ import org.jboss.as.controller.client.*
  */
 abstract class JBossAbstractNagiosPlugin {
 
-    public final static int NAGIOS_RETURN_OK = 0;
-    public final static int NAGIOS_RETURN_WARNING = 1;
-    public final static int NAGIOS_RETURN_CRITICAL = 2;
+    public final static int NAGIOS_RETURN_OK = 0
+    public final static int NAGIOS_RETURN_WARNING = 1
+    public final static int NAGIOS_RETURN_CRITICAL = 2
+    public final static int NAGIOS_RETURN_UNKNOWN = 3
 
     protected ModelControllerClient client
     private CallbackHandler ch
