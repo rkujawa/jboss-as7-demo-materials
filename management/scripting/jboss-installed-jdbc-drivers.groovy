@@ -9,27 +9,20 @@ import javax.security.auth.callback.CallbackHandler
  * @author rkujawa
  */
 
-hostname = "vtestjb1.home.c0ff33.net"
+hostname = "192.168.200.41"
 port = 9999
 login = "admin"
-password = "AwfyoxAiHa"
+password = "jboss"
 
 ch = (CallbackHandler) new JBossTrivialCallbackHandler(login, password)
 
 client = ModelControllerClient.Factory.create(hostname, port, ch)
 
 op = new ModelNode();
-//op.get("operation").set("read-resource")
 op.get("operation").set("installed-drivers-list")
-/*
- * include-runtime - citing AS7 Admin Guide: whether to include runtime attributes
- * (i.e. those whose value does not come from the persistent configuration) in the response
- */
-//op.get("include-runtime").set(true)
+
 addr = op.get("address")
 addr.add("subsystem", "datasources")
-
-println "foo"
 
 retval = client.execute(op)
 

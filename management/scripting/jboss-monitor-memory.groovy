@@ -32,7 +32,6 @@ else
 
 String login = opt.l
 String password = opt.s
-String dsName = opt.d
 int warnMb = Integer.parseInt(opt.w)
 int critMb = Integer.parseInt(opt.c)
 
