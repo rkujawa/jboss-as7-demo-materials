@@ -7,9 +7,9 @@ import org.jboss.dmr.ModelNode;
  */
 class JBossJdbcPoolNagiosPlugin extends JBossAbstractNagiosPlugin {
 
-    private String dsName
-    private int warnPercent
-    private int critPercent
+    String dsName
+    int warnPercent
+    int critPercent
 
     @Override
     int check() {
@@ -56,27 +56,4 @@ class JBossJdbcPoolNagiosPlugin extends JBossAbstractNagiosPlugin {
         return rv.get("result")
     }
 
-    String getDsName() {
-        return dsName
-    }
-
-    void setDsName(String dsName) {
-        this.dsName = dsName
-    }
-
-    int getWarnPercent() {
-        return warnPercent
-    }
-
-    void setWarnPercent(int warnPercent) {
-        this.warnPercent = warnPercent
-    }
-
-    int getCritPercent() {
-        return critPercent
-    }
-
-    void setCritPercent(int critPercent) {
-        this.critPercent = critPercent
-    }
 }

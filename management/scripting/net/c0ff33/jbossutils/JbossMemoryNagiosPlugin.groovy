@@ -7,8 +7,8 @@ import org.jboss.dmr.ModelNode
  */
 class JbossMemoryNagiosPlugin extends JBossAbstractNagiosPlugin {
 
-    private int usedMbWarn
-    private int usedMbCrit
+    int usedMbWarn
+    int usedMbCrit
 
     @Override
     int check() {
@@ -55,19 +55,4 @@ class JbossMemoryNagiosPlugin extends JBossAbstractNagiosPlugin {
         return rv.get("result").get("heap-memory-usage").get("used").asLong()
     }
 
-    int getUsedMbWarn() {
-        return usedMbWarn
-    }
-
-    void setUsedMbWarn(int usedMbWarn) {
-        this.usedMbWarn = usedMbWarn
-    }
-
-    int getUsedMbCrit() {
-        return usedMbCrit
-    }
-
-    void setUsedMbCrit(int usedMbCrit) {
-        this.usedMbCrit = usedMbCrit
-    }
 }
