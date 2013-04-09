@@ -30,7 +30,7 @@ class JbossMemoryNagiosPlugin extends JBossAbstractNagiosPlugin {
 
         println(": " + ((int) usedHeap) + "MB used")
 
-        return rv  //To change body of implemented methods use File | Settings | File Templates.
+        return rv
     }
 
     /**
