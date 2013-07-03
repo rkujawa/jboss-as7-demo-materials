@@ -1,5 +1,5 @@
 import net.c0ff33.jbossutils.JBossAbstractNagiosPlugin
-import net.c0ff33.jbossutils.JbossMemoryNagiosPlugin
+import net.c0ff33.jbossutils.JBossMemoryNagiosPlugin
 
 /**
  * @author rkujawa
@@ -35,7 +35,7 @@ String password = opt.s
 int warnMb = Integer.parseInt(opt.w)
 int critMb = Integer.parseInt(opt.c)
 
-JbossMemoryNagiosPlugin p = new JbossMemoryNagiosPlugin()
+JBossMemoryNagiosPlugin p = new JBossMemoryNagiosPlugin()
 
 p.connect(hostname, port, login, password)
 p.setUsedMbWarn(warnMb)

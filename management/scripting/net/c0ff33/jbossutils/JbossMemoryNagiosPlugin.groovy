@@ -5,7 +5,7 @@ import org.jboss.dmr.ModelNode
 /**
  * @author rkujawa
  */
-class JbossMemoryNagiosPlugin extends JBossAbstractNagiosPlugin {
+class JBossMemoryNagiosPlugin extends JBossAbstractNagiosPlugin {
 
     int usedMbWarn
     int usedMbCrit
@@ -40,17 +40,17 @@ class JbossMemoryNagiosPlugin extends JBossAbstractNagiosPlugin {
     private long getUsedHeap() {
         ModelNode op
         ModelNode addr
-        op = new ModelNode();
-        op.get("operation").set("read-resource");
-        op.get("include-runtime").set(true);
-        addr = op.get("address");
-        addr.add("core-service", "platform-mbean");
-        addr.add("type", "memory");
-        ModelNode rv = null;
+        op = new ModelNode()
+        op.get("operation").set("read-resource")
+        op.get("include-runtime").set(true)
+        addr = op.get("address")
+        addr.add("core-service", "platform-mbean")
+        addr.add("type", "memory")
+        ModelNode rv = null
         try {
-            rv = super.client.execute(op);
+            rv = super.client.execute(op)
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace()
         }
         return rv.get("result").get("heap-memory-usage").get("used").asLong()
     }
