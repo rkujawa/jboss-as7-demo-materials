@@ -11,3 +11,4 @@ Code in this directory generally depends on the following libraries from JBoss A
 * jboss-as/modules/org/jboss/marshalling/main/jboss-marshalling-1.3.11.GA.jar,
 * jboss-as/modules/org/jboss/as/controller/main/jboss-as-controller-7.1.1.Final.jar,
 * jboss-as/modules/org/jboss/logmanager/main/jboss-logmanager-1.2.2.GA.jar
+* jboss-as/modules/org/jboss/marshalling/main/jboss-marshalling-1.3.11.GA.jar
