@@ -40,14 +40,14 @@ class JBossJdbcPoolNagiosPlugin extends JBossAbstractNagiosPlugin {
     private ModelNode getDatasourcePoolStatistics() {
         ModelNode op
         ModelNode addr
-        op = new ModelNode();
-        op.get("operation").set("read-resource");
-        op.get("include-runtime").set(true);
-        addr = op.get("address");
-        addr.add("subsystem", "datasources");
-        addr.add("data-source", dsName);
-        addr.add("statistics", "pool");
-        ModelNode rv = null;
+        op = new ModelNode()
+        op.get("operation").set("read-resource")
+        op.get("include-runtime").set(true)
+        addr = op.get("address")
+        addr.add("subsystem", "datasources")
+        addr.add("data-source", dsName)
+        addr.add("statistics", "pool")
+        ModelNode rv = null
         try {
             rv = super.client.execute(op);
         } catch (Exception e) {
